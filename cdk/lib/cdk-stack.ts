@@ -6,13 +6,13 @@ export class CdkStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const websiteBucket = new s3.Bucket(this, 'BlogBucket', {
+    const websiteBucket = new s3.Bucket(this, 'WebsiteBucket', {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true
     });
    
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
-      sources: [s3deploy.Source.asset('../blog/dist/blog')], 
+      sources: [s3deploy.Source.asset('../website/dist/website')], 
       destinationBucket: websiteBucket
     });
     

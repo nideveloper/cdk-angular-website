@@ -13,5 +13,5 @@ phases:
       nodejs: 12
   build:
     commands:
-      - cd blog && npm install && npm run build
+      - cd website && npm install && npm run build
       - cd ../cdk && npm install && npm run build && npm run cdk synth && npm run deploy
