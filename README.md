@@ -4,7 +4,7 @@ This is a starter with AWS CDK and Angular packaged together in a way that you c
 ## How To Use
 If you have aws configured locally or you are in cloud9 this is as simple as running two commands (assuming your terminal starts at the README.md level):
 - cd website && npm i && npm run build
-- cd ../cdk && npm run build && npm run deploy 
+- cd ../cdk && npm i && npm run build && npm run deploy 
 
 ## Project Structure
 
